@@ -1,0 +1,69 @@
+{
+  "name": "koalerplate",
+  "version": "1.0.0",
+  "description": "Opinionated koa2 boilerplate with full features",
+  "main": "app/index.js",
+  "scripts": {
+    "dev": "nodemon app --exec \"node --require dotenv/config --require babel-register\" | bunyan -o short",
+    "pretest": "yarn run lint || true",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "flow": "flow check || exit 0",
+    "lint": "eslint app",
+    "lint:fix": "eslint app --fix",
+    "build": "rimraf build && babel app --out-dir=build --copy-files --node-env production",
+    "coverage": "nyc yarn test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "author": "Li Kai <likailk94@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^0.3.3",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "boom": "^4.2.0",
+    "bunyan": "^1.8.4",
+    "debug": "^2.2.0",
+    "graphql": "^0.7.2",
+    "koa": "^2.0.0",
+    "koa-bodyparser": "next",
+    "koa-bunyan-logger": "^2.0.0-pre1",
+    "koa-compose": "^3.1.0",
+    "koa-router": "^7.0.1",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-eslint": "^7.1.0",
+    "coveralls": "^2.11.14",
+    "dotenv": "^2.0.0",
+    "eslint": "^3.9.0",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-import-resolver-node": "^0.2.3",
+    "eslint-plugin-ava": "^3.1.1",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-import": "^2.0.1",
+    "flow-bin": "^0.34.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^8.3.2",
+    "rimraf": "^2.5.4"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register"
+    ]
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+      "app"
+    ],
+    "require": [
+      "babel-register"
+    ]
+  }
+}
