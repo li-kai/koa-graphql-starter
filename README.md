@@ -1,4 +1,4 @@
-## `koa-graphql-starter`
+## `koa-graphql-starter` [![Build Status](https://travis-ci.org/li-kai/koa-graphql-starter.svg?branch=master)](https://travis-ci.org/li-kai/koa-graphql-starter)
 > An opinionated boilerplate for koa v2 and graphql.
 
 ### Setup
@@ -39,6 +39,7 @@
 - `yarn run lint` - lints all the files in `src/` folder
 - `yarn run lint:fix` - fixes all the possible linting errors
 - `yarn run flow` - does a full static type check with flow
+- `yarn coverage` - command for coveralls or similar coverage tools
 
 ### Debug
 In development environment, you may debug your application by using [Debug](https://github.com/visionmedia/debug).
