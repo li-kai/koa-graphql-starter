@@ -3,7 +3,7 @@ import Koa from 'koa';
 
 import Router from 'koa-router';
 import BodyParser from 'koa-bodyparser';
-import { apolloKoa, graphiqlKoa } from 'apollo-server';
+import { graphqlKoa, graphiqlKoa } from 'graphql-server-koa';
 
 import Boom from 'boom';
 import loggerMiddleware from 'koa-bunyan-logger';
@@ -24,7 +24,7 @@ app.use(loggerMiddleware.requestLogger());
 app.use(errorMiddleware());
 
 // Registers routes
-router.post('/graphql', apolloKoa({ schema }));
+router.post('/graphql', graphqlKoa({ schema }));
 router.get('/graphiql', graphiqlKoa({ endpointURL: '/graphql' }));
 
 app.use(router.routes());
