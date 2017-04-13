@@ -31,7 +31,7 @@
     "koa": "^2.0.0",
     "koa-bodyparser": "next",
     "koa-bunyan-logger": "^2.0.0-pre1",
-    "koa-compose": "^3.1.0",
+    "koa-compose": "^4.0.0",
     "koa-router": "^7.0.1",
     "nodemon": "^1.11.0"
   },
