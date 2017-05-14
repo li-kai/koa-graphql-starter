@@ -44,7 +44,7 @@
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-import-resolver-node": "^0.3.0",
     "eslint-plugin-ava": "^4.0.0",
-    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-flowtype": "^2.33.0",
     "eslint-plugin-import": "^2.0.1",
     "flow-bin": "^0.46.0",
     "nodemon": "^1.11.0",
