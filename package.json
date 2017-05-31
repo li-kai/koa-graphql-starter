@@ -28,7 +28,7 @@
     "debug": "^2.2.0",
     "graphql": "^0.10.0",
     "koa": "^2.2.0",
-    "graphql-server-koa": "^0.7.0",
+    "graphql-server-koa": "^0.8.0",
     "koa-bodyparser": "next",
     "koa-bunyan-logger": "^2.0.0-pre1",
     "koa-compose": "^4.0.0",
