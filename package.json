@@ -48,7 +48,7 @@
     "eslint-plugin-import": "^2.0.1",
     "flow-bin": "^0.47.0",
     "nodemon": "^1.11.0",
-    "nyc": "^10.0.0",
+    "nyc": "^11.0.1",
     "rimraf": "^2.5.4"
   },
   "ava": {
